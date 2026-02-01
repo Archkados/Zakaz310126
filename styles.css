@@ -5,15 +5,15 @@
 }
 @font-face {
     font-family: "JostItalic";
-    src: url(/fonts/Jost-Italic-VariableFont_wght.ttf);
+    src: url(./Jost-Italic-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: "JostNormal";
-    src: url(/fonts/Jost-VariableFont_wght.ttf);
+    src: url(./Jost-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: "Nova";
-    src: url(/fonts/NOVABOLD.otf);
+    src: url(./NOVABOLD.otf);
 }
 
 body{
@@ -395,3 +395,316 @@ header{
 }
 
 
+@media (max-width: 768px){
+
+  body{
+    overflow-x: hidden;
+  }
+
+  header,
+  .NervSeason,
+  .AboutUs,
+  .Certificate,
+  .OurEvents,
+  .footer{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  header{
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .logo img{
+    width: 72px;
+  }
+
+/* Скрытая менюшка */
+ .menu{
+    display: none;
+  } 
+
+  /*  Если хочешь чтобы менюшка была, этот комментарий раскомментируй и закомментируй предыдущий блок .menu
+  .menu{
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 8px 10px;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .item{ 
+    font-size: 14px; 
+    padding: 6px 10px; 
+  } */
+  
+
+  .NervSeason{
+    height: 100vh;
+    margin-bottom: 40px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .left-season-text{
+    top: 16%;
+    left: 16px;
+    font-size: 32px;
+  }
+  .left-season-text .RedUpper{
+    margin-left: 0;
+  }
+  .left-season-text .WhiteLower{
+    font-size: 64px;
+  }
+
+  .right-season-text{
+    top: 46%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    text-align: right;
+    font-size: 26px;
+    line-height: 0.95;
+    font-size: 20px;
+  }
+
+  .down-season-text{
+    top: 86%;
+    left: 50%;
+    transform: translateX(-55%);
+    text-align: right;
+    width: 92%;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  
+  .PurpleUpperBig{
+    width: 130px;
+    top: 15%;
+    right: 3px;
+  }
+  .GreenUpperSmall{
+    width: 75px;
+    top: 32%;
+    right: 100px;
+  }
+  .PurpleDownSmall{
+    width: 72px;
+    left: 28px;
+    right: auto;
+    bottom: 28%;
+    transform: none;
+    rotate: 0deg;
+  }
+  .GreenDownBig{
+    width: 205px;
+    right: 85px;
+    bottom: 13%;
+  }
+
+.AboutUs{
+  display: grid;
+  grid-template-areas:
+    "title"
+    "photo"
+    "text";
+  justify-items: center;
+  row-gap: 14px;
+  margin-bottom: 70px;
+}
+
+.about-right-text{
+  display: contents;
+  text-align: left;
+}
+
+.about-upper{
+  grid-area: title;
+  width: 100%;
+  max-width: 370px;
+  font-size: 40px;
+  justify-self: start;
+}
+
+.about-left-image{
+  grid-area: photo;
+  width: 100%;
+  max-width: 370px;
+}
+
+.about-left-image img{
+  width: 100%;
+  max-width: 370px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-lower{
+    width: 100% !important;
+    max-width: 370px;
+    font-family: "JostItalic";
+    font-size: 32px !important;
+    font-weight: 500;
+    line-height: 0.9 !important;   
+    word-spacing: 10px !important;
+    text-align: left !important;     
+    hyphens: none;                   
+}
+  
+
+.Certificate{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+    justify-items: center;
+    margin-bottom: 80px;
+}
+
+.certificate1{ 
+    order: 1; 
+}
+.certificate2{ 
+    order: 3; 
+}
+
+.certificate1 img,
+.certificate2 img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+.certificate-text{
+    display: contents;
+}
+
+.certificate-text p:nth-child(1){
+    order: 2;
+    width: 100%;
+    max-width: 250px;
+    font-family: "JostItalic";
+    font-size: 24px;
+    line-height: 0.9;
+    word-spacing: 2px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.certificate-text p:nth-child(2){
+    order: 4;
+    width: 100%;
+    max-width: 250px;
+    font-family: "JostItalic";
+    font-size: 24px;
+    line-height: 0.9;
+    word-spacing: 2px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+.OurEvents{
+    margin-bottom: 40px;
+}
+
+.event-upper-text h1{
+    font-size: 42px;
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.events-cards{
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 370px;
+    margin: 0 auto;
+}
+.event-card{
+    width: 100%;
+    max-width: 370px;
+    gap: 14px;
+    border-radius: 14px;
+}
+
+.event-card img{
+    width: 135px;
+}
+
+.card-details{
+    padding: 14px 14px 14px 0;
+    gap: 10px;
+}
+
+.card-details h1{
+    font-size: 16px;
+    max-width: 175px;
+}
+
+.event-card .card-details .images-text1,
+.event-card .card-details .images-text2{
+    font-size: 12px;
+    gap: 8px;
+}
+
+.event-card .card-details .images-text1 img,
+.event-card .card-details .images-text2 img{
+    width: 20px;
+}
+
+.card-details .bottom-event-text{
+    font-size: 12px;
+}
+
+.card-details a:hover{
+    transform: scale(1.05);
+}
+
+  
+.footer{
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+}
+
+
+.footer-inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-left: 0;
+}
+
+.footer-logo{
+    position: static;
+    left: auto;
+    width: 120px;
+    margin-bottom: 8px;
+}
+
+.footer-quote{
+    font-size: 24px;
+    line-height: 0.9;
+    max-width: 260px;
+}
+
+.footer-row{
+    gap: 16px;
+}
+
+.footer-icon{
+    width: 22px;
+    height: 22px;
+}
+
+.footer-link{
+    font-size: 14px;
+}
+}
