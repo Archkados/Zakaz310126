@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "JostItalic";
+    src: url(/fonts/Jost-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "JostNormal";
+    src: url(/fonts/Jost-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Nova";
+    src: url(/fonts/NOVABOLD.otf);
+}
+
+body{
+    background: #000000;
+    color: #ffffff;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+.logo img{
+    width: 105px;
+}
+.menu{
+  background: #4a4a4a;
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  gap: 8px;
+}
+
+.item{
+  position: relative;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-family: "JostNormal";
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.item::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #C20102;
+  border-radius: 25px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.item:hover::before{
+  transform: scaleX(1);
+}
+
+
+.item.active::before{
+  transform: scaleX(1);
+}
+
+.NervSeason {
+    position: relative;
+    height: calc(100vh - 100px);
+    padding: 0 60px;
+    margin-bottom: 150px;
+}
+.PurpleUpperBig{
+    position: absolute;
+    width: 310px;
+    right: 44%;
+    top: -14%;
+}
+.GreenUpperSmall{
+    position: absolute;
+    width: 210px;
+    right: 32%;
+    top: 8%;
+    transform: scaleX(-1);
+}
+.left-season-text{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    font-size: 62px;
+    font-family: "JostItalic";
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+.left-season-text .RedUpper{
+    color: #C20102;
+    font-weight: 500;
+    margin-left: 50px;
+}
+.left-season-text .WhiteLower{
+    color: #FFFFFF;
+    font-size: 120px;
+    font-weight: 500;
+}
+
+.right-season-text{
+    position: absolute;
+    right: 4%;
+    top: 35%;
+    text-align: right;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-family: "JostItalic";
+    line-height: 0.9;
+}
+.right-season-text .WhiteRightSeason{
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.down-season-text{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: "JostItalic";
+    line-height: 0.9;
+    font-size: 38px;
+}
+.down-season-text .Quote{
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.PurpleDownSmall{
+    position: absolute;
+    width: 155px;
+    right: 32%;
+    bottom: 10%;
+    transform: scaleX(-1);
+    rotate: 260deg;
+}
+.GreenDownBig{
+    position: absolute;
+    width: 400px;
+    right: 1%;
+    bottom: -15%;
+}
+
+.AboutUs{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.about-left-image img{
+    width: 550px;
+    height: auto;
+
+}
+.about-right-text{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;  
+}
+
+.about-right-text .about-upper{
+    text-transform: uppercase;
+    font-family: "Nova";
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.about-right-text .about-lower{
+    font-family: "JostItalic";
+    font-size: 36px;
+    font-weight: 500;
+    width: 700px;
+    line-height: 0.9;
+    word-spacing: 15px;
+}
+
+.about-right-text .about-lower span{
+    color: #C20102;
+}
+
+.Certificate{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 140px;
+}
+
+.certificate1 img{
+    width: 350px;
+    height: 260px;
+}
+.certificate2 img{
+    width: 350px;
+}
+
+.certificate-text{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 400px;
+    font-family: "JostItalic";
+    font-size: 36px;
+    line-height: 0.9;
+    word-spacing: 10px;
+    font-weight: 500;
+}
+
+.OurEvents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.event-upper-text h1{
+    text-transform: uppercase;
+    font-family: "Nova";
+    font-size: 84px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.events-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;                            
+    width: 100%;
+    max-width: 1200px;                     
+    justify-items: stretch;
+}
+
+.event-card{
+    display: flex;
+    align-items: stretch;
+    gap: 22px;              
+    width: 100%;
+    max-width: 380px;         
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.event-card img{
+    width: 150px;    
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;      
+    justify-content: center;
+    padding: 16px 16px 16px 0;   
+    gap: 14px;                  
+}
+
+.card-details h1{
+    font-family: "JostItalic";
+    font-size: 20px;         
+    line-height: 1.15;
+    max-width: 190px;          
+}
+
+.card-details .bottom-event-text{
+    font-family: "JostItalic";
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #C20102;
+    font-weight: 500;
+}
+
+.card-details a{
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+.card-details a:hover{
+    transform: scale(1.2);
+}
+
+.images-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.event-card .card-details .images-text1,
+.event-card .card-details .images-text2{
+    display: flex;
+    gap: 10px;
+    text-transform: uppercase;
+    font-family: "JostItalic";
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.event-card .card-details .images-text1 img,
+.event-card .card-details .images-text2 img{
+    width: 25px;
+}
+
+
+
+.event-card:last-child .images-text2{
+    text-transform: none;
+}
+
+.event-card:last-child .images-text2 img{
+    width: 25px;
+    height: 25px;
+}
+
+.footer{
+  padding: 40px 60px;
+}
+
+.footer-inner{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 300px;
+  margin-left: 100px;
+}
+
+.footer-logo{
+  position: relative;
+  left: 6.5%;
+  width: 90px;
+  height: auto;
+}
+
+.footer-quote{
+  font-family: "JostItalic";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 0.9;
+}
+
+.footer-right{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-row{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-icon{
+  width: 26px;
+  height: 26px;
+}
+
+.footer-link{
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "JostItalic";
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: transform 0.3s;
+}
+
+.footer-link:hover{
+  color: #C20102;
+  transform: scale(1.2);
+}
+
+
