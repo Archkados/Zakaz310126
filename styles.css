@@ -70,7 +70,6 @@ header{
   transform: scaleX(1);
 }
 
-
 .item.active::before{
   transform: scaleX(1);
 }
@@ -324,8 +323,6 @@ header{
     width: 25px;
 }
 
-
-
 .event-card:last-child .images-text2{
     text-transform: none;
 }
@@ -394,7 +391,7 @@ header{
   transform: scale(1.2);
 }
 
-
+/* МОБИЛЬНЫЕ СТИЛИ (для обычных телефонов БЕЗ Desktop mode) */
 @media (max-width: 768px){
 
   body{
@@ -422,26 +419,9 @@ header{
     width: 72px;
   }
 
-/* Скрытая менюшка */
- .menu{
+  .menu{
     display: none;
   } 
-
-  /*  Если хочешь чтобы менюшка была, этот комментарий раскомментируй и закомментируй предыдущий блок .menu
-  .menu{
-    display: flex;
-    width: auto;
-    height: auto;
-    padding: 8px 10px;
-    gap: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  .item{ 
-    font-size: 14px; 
-    padding: 6px 10px; 
-  } */
-  
 
   .NervSeason{
     height: 100vh;
@@ -707,4 +687,378 @@ header{
 .footer-link{
     font-size: 14px;
 }
+}
+
+/* КОСТЫЛЬ ДЛЯ DESKTOP MODE НА ТЕЛЕФОНЕ */
+/* Перезаписывает мобильные стили обратно на десктопные */
+@media (min-width: 1024px) {
+  body{
+    overflow-x: visible;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px !important;
+  }
+  
+  .logo img{
+    width: 105px;
+  }
+  
+  .menu{
+    background: #4a4a4a;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex !important;
+    gap: 8px;
+  }
+
+  .NervSeason {
+    position: relative;
+    height: calc(100vh - 100px);
+    padding: 0 60px !important;
+    margin-bottom: 150px;
+  }
+  
+  .PurpleUpperBig{
+    position: absolute;
+    width: 310px;
+    right: 44%;
+    top: -14%;
+  }
+  
+  .GreenUpperSmall{
+    position: absolute;
+    width: 210px;
+    right: 32%;
+    top: 8%;
+    transform: scaleX(-1);
+  }
+  
+  .left-season-text{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    font-size: 62px;
+    font-family: "JostItalic";
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+  
+  .left-season-text .RedUpper{
+    color: #C20102;
+    font-weight: 500;
+    margin-left: 50px;
+  }
+  
+  .left-season-text .WhiteLower{
+    color: #FFFFFF;
+    font-size: 120px;
+    font-weight: 500;
+  }
+
+  .right-season-text{
+    position: absolute;
+    right: 4%;
+    top: 35%;
+    left: auto;
+    transform: none;
+    text-align: right;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-family: "JostItalic";
+    line-height: 0.9;
+  }
+
+  .down-season-text{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: none;
+    text-align: right;
+    width: auto;
+    text-transform: uppercase;
+    font-family: "JostItalic";
+    line-height: 0.9;
+    font-size: 38px;
+  }
+
+  .PurpleDownSmall{
+    position: absolute;
+    width: 155px;
+    right: 32%;
+    left: auto;
+    bottom: 10%;
+    transform: scaleX(-1);
+    rotate: 260deg;
+  }
+  
+  .GreenDownBig{
+    position: absolute;
+    width: 400px;
+    right: 1%;
+    bottom: -15%;
+  }
+
+  .AboutUs{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 100px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about-left-image{
+    grid-area: auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .about-left-image img{
+    width: 550px;
+    height: auto;
+  }
+  
+  .about-right-text{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: left;
+  }
+
+  .about-upper{
+    grid-area: auto;
+    width: auto;
+    max-width: none;
+    justify-self: auto;
+  }
+  
+  .about-right-text .about-upper{
+    text-transform: uppercase;
+    font-family: "Nova";
+    font-size: 56px;
+    font-weight: 500;
+  }
+  
+  .about-right-text .about-lower{
+    font-family: "JostItalic";
+    font-size: 36px !important;
+    font-weight: 500;
+    width: 700px !important;
+    max-width: none;
+    line-height: 0.9 !important;
+    word-spacing: 15px !important;
+    text-align: left !important;
+  }
+
+  .Certificate{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 140px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .certificate1{
+    order: 0;
+  }
+
+  .certificate2{
+    order: 0;
+  }
+  
+  .certificate1 img{
+    width: 350px;
+    height: 260px;
+    max-width: none;
+  }
+  
+  .certificate2 img{
+    width: 350px;
+    max-width: none;
+    height: auto;
+  }
+  
+  .certificate-text{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 400px;
+    font-family: "JostItalic";
+    font-size: 36px;
+    line-height: 0.9;
+    word-spacing: 10px;
+    font-weight: 500;
+  }
+
+  .certificate-text p:nth-child(1){
+    order: 0;
+    width: auto;
+    max-width: none;
+    font-size: 36px;
+    word-spacing: 10px;
+    text-align: left;
+  }
+
+  .certificate-text p:nth-child(2){
+    order: 0;
+    width: auto;
+    max-width: none;
+    font-size: 36px;
+    word-spacing: 10px;
+    text-align: left;
+  }
+
+  .OurEvents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .event-upper-text h1{
+    text-transform: uppercase;
+    font-family: "Nova";
+    font-size: 84px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .events-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;                            
+    width: 100%;
+    max-width: 1200px;                     
+    justify-items: stretch;
+    margin: 0;
+  }
+  
+  .event-card{
+    display: flex;
+    align-items: stretch;
+    gap: 22px;              
+    width: 100%;
+    max-width: 380px;         
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .event-card img{
+    width: 150px;    
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;      
+    justify-content: center;
+    padding: 16px 16px 16px 0;   
+    gap: 14px;                  
+  }
+  
+  .card-details h1{
+    font-family: "JostItalic";
+    font-size: 20px;         
+    line-height: 1.15;
+    max-width: 190px;          
+  }
+
+  .event-card .card-details .images-text1,
+  .event-card .card-details .images-text2{
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .event-card .card-details .images-text1 img,
+  .event-card .card-details .images-text2 img{
+    width: 25px;
+  }
+  
+  .card-details .bottom-event-text{
+    font-family: "JostItalic";
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #C20102;
+    font-weight: 500;
+  }
+
+  .card-details a:hover{
+    transform: scale(1.2);
+  }
+
+  .footer{
+    padding: 40px 60px !important;
+  }
+  
+  .footer-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 300px;
+    margin-left: 100px;
+  }
+  
+  .footer-logo{
+    position: relative;
+    left: 6.5%;
+    width: 90px;
+    height: auto;
+    margin-bottom: 0;
+  }
+  
+  .footer-quote{
+    font-family: "JostItalic";
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 0.9;
+    max-width: none;
+  }
+  
+  .footer-right{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .footer-row{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .footer-icon{
+    width: 26px;
+    height: 26px;
+  }
+  
+  .footer-link{
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "JostItalic";
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: transform 0.3s;
+  }
+  
+  .footer-link:hover{
+    color: #C20102;
+    transform: scale(1.2);
+  }
 }
